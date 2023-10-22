@@ -3,16 +3,24 @@ package com.coderscampus.lesson1;
 public class Lesson1Application {
 
 	public static void main(String[] args) {
-		PhysicsTeacher physicsTeacher = new PhysicsTeacher();
+		Teacher physicsTeacher = new PhysicsTeacher();
 		
 		System.out.println(physicsTeacher.getClasses());
 		System.out.println(physicsTeacher.getLevalOfEducation());
+		physicsTeacher.teach();
+		System.out.println("----");
 
-		CompSciTeacher compSciTeacher = new CompSciTeacher();
+		Teacher compSciTeacher = new CompSciTeacher();
 		System.out.println(compSciTeacher.getClasses());
 		System.out.println(compSciTeacher.getLevalOfEducation());
+		compSciTeacher.teach();
+		System.out.println("----");
 		
-		
+		Teacher quantumTeacher = new QuantumPhysicsTeacher();
+		System.out.println(quantumTeacher.getClasses());
+		System.out.println(quantumTeacher.getLevalOfEducation());
+		quantumTeacher.teach();
+		System.out.println("----");
 	}
 
 }
