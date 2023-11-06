@@ -12,4 +12,5 @@ public class PhysicsTeacher extends Teacher{
 		System.out.println("I'm a physics teacher and I'm now teaching physics");
 	}
 
+
 }
