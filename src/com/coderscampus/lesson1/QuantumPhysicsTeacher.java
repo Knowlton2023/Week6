@@ -9,6 +9,7 @@ public class QuantumPhysicsTeacher extends PhysicsTeacher {
 	}
 
 	public void teach () {
+		System.out.println("I'm a quantum physics teacher, and I'm now in a super-position of teaching.");
 		
 	}
 }

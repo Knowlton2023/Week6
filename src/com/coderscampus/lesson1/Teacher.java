@@ -3,7 +3,7 @@ package com.coderscampus.lesson1;
 public class Teacher {
 	private String classes;
 	private String levalOfEducation;
-
+	
 	private void giveARaise () {
 		System.out.println("Teacher gets a raise!");
 	}
