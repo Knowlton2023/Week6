@@ -1,4 +1,6 @@
-package com.coderscampus.lesson1;
+package com.coderscampus.lesson1.phys;
+
+import com.coderscampus.lesson1.Teacher;
 
 public class PhysicsTeacher extends Teacher{
 	
@@ -12,5 +14,10 @@ public class PhysicsTeacher extends Teacher{
 		System.out.println("I'm a physics teacher and I'm now teaching physics");
 	}
 
+	public void teach (String teacherName) {
+		System.out.println("I'm a physics teacher called " + teacherName + " and I'm now teaching physics");
+	}
 
+	
+	
 }
