@@ -5,15 +5,27 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Writer;
 
 public class FileOutputApplication {
 
 	public static void main(String[] args) throws IOException {
-		BufferedWriter write = new BufferedWriter(new FileWriter("data.txt"));
+		BufferedWriter writer = null;
 		
-		
-		BufferedReader reader = new BufferedReader(new FileReader("data.txt"));
+		try {
+			writer = new BufferedWriter(new FileWriter("data.txt"));
+			writer.write("This is a test string that will be outoput into a file.\n");
+			writer.write("Is this line of text on a new line?");
+		} finally {
+			if (writer != null) writer.close();
+		}
 
+		BufferedReader reader = null;
+		try {
+			reader = new BufferedReader(new FileReader("data.txt"));
+			System.out.println(reader.readLine());
+		} finally {
+			if (reader != null)	reader.close();
+		}
 	}
-
 }
